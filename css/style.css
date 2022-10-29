@@ -90,32 +90,137 @@ h6 {
 }
 
 [class*="__container"] {
-  max-width: 1054px;
+  max-width: 1084px;
   margin: 0px auto;
+  padding: 0px 15px;
+}
+/* -------------PC------------ */
+@media (max-width: 1054px) {
+  [class*="__container"] {
+    max-width: 970px;
+  }
+}
+/* -------------Tablet------------ */
+@media (max-width: 991.98px) {
+  [class*="__container"] {
+    max-width: 750px;
+  }
+}
+/* -------------Mobile------------ */
+@media (max-width: 767.98px) {
+  [class*="__container"] {
+    max-width: none;
+  }
 }
 
+/* --------------HEADER-------------- */
 .header {
-  flex: 0 1 auto;
+  /* background: #fafbfd; */
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+.header__container {
+  display: flex;
+  min-height: 114px;
+  align-items: center;
 }
 .header__logo {
+  /* flex: 0 1 auto; */
 }
-.header__menu {
+.header__logo a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000;
 }
-.menu {
-}
-.menu__list {
-}
-.menu__item {
-}
-.menu__link {
-}
-.header__button {
-}
-.button {
+.header__logo a span span {
+  color: #ec5863;
 }
 
-.button_blue {
+.header__menu {
+  flex: 1 1 auto;
 }
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  /* padding: 0px 40px 0px 0px; */
+}
+.menu__list {
+  display: flex;
+  /* justify-content: flex-end; */
+}
+.menu__item {
+  margin: 0px 40px 0px 0px;
+}
+
+/* .menu__item :not(.menu__item:last-child) {
+  margin: 0px 40px 0px 0px;
+} */
+.menu__link {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 1.2;
+  letter-spacing: 0.14em;
+  color: #000;
+}
+.header__button {
+  flex: 0 0 252px;
+  display: flex;
+  justify-content: flex-end;
+  /* padding: 0px 0px 0px 122px; */
+}
+
+.button {
+  display: inline-block;
+  width: 130px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 5px;
+  text-align: center;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #fcfdfe;
+  background-color: #ec5863;
+  transition: background-color 0.3s ease 0s;
+}
+.button:hover {
+  background-color: #9c3a41;
+}
+.button_blue {
+  background-color: #4285f4;
+}
+
+.button_blue:hover {
+  background-color: #2b60af;
+}
+
+@media (max-width: 991.98px) {
+  .header__container {
+    min-height: 80px;
+  }
+  .header__button {
+    flex: 0 0 170px;
+  }
+  .menu__item {
+    margin: 0px 30px 0px 0px;
+  }
+}
+
+/* --------------END HEADER-------------- */
 
 .main {
   flex: 1 1 auto;
