@@ -449,35 +449,76 @@ h6 {
 }
 
 .stay-safe {
-  border: 1px solid red;
   padding: 79px 0px;
 }
 .stay-safe__container {
-  border: 1px solid blue;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
 .stay-safe__mobile {
-  border: 1px solid red;
   flex: 0 1 55%;
   padding: 0px 0px 0px 45px;
 }
+
 .stay-safe__body {
   width: 373px;
   position: relative;
   text-align: center;
-  border: 1px solid green;
   padding: 56px 0px 27px 0px;
 }
+.stay-safe__body::before,
+.stay-safe__body::after {
+  content: "";
+  position: absolute;
+  background-color: #ec5863;
+  border-radius: 30px;
+  z-index: -1;
+}
+.stay-safe__body::before {
+  width: 77px;
+  height: 77px;
+  left: 261px;
+  top: 358px;
+}
+.stay-safe__body::after {
+  width: 206px;
+  height: 27px;
+  background: url(../img/shadow_mobile.png);
+  bottom: 13.5px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: -1;
+}
 .stay-safe__image {
-  border: 2px dashed red;
   display: inline-block;
   box-shadow: 2px 4px 32px rgba(0, 0, 0, 0.12);
   border-radius: 16px;
 }
+.stay-safe__image::before,
+.stay-safe__image::after {
+  content: "";
+  position: absolute;
+  background-color: #ec5863;
+  border-radius: 30px;
+  z-index: -1;
+}
+.stay-safe__image::before {
+  width: 77px;
+  height: 77px;
+  left: 32px;
+  bottom: 0;
+  z-index: -1;
+}
+.stay-safe__image::after {
+  width: 147px;
+  height: 147px;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
 .stay-safe__description {
-  border: 1px solid red;
   flex: 0 1 45%;
   max-width: 379px;
 }
@@ -486,6 +527,9 @@ h6 {
   .get-started__container::before {
     right: 185px;
     border-radius: 20px 0px 0px 20px;
+  }
+  .stay-safe__mobile {
+    padding: 0;
   }
 }
 
@@ -511,8 +555,32 @@ h6 {
   .get-started__video {
     padding: 0;
   }
-}
 
+  .stay-safe {
+    padding: 15px 0px;
+  }
+
+  .stay-safe__container {
+    justify-content: center;
+  }
+  .stay-safe__mobile {
+    flex: 0 1 100%;
+  }
+  .stay-safe__body {
+    margin: auto;
+  }
+  .stay-safe__description {
+    margin-top: 20px;
+    flex: 0 1 100%;
+  }
+}
+@media (max-width: 340px) {
+  .stay-safe__image::after {
+    width: 100px;
+    height: 100px;
+    left: 30px;
+  }
+}
 /* --------------END MAIN-------------- */
 .footer {
   flex: 0 1 auto;
